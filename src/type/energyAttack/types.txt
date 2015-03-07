@@ -1,0 +1,12 @@
+[
+    "graviton",
+    "atom",
+    "fire",
+    "electric",
+    "magnetic",
+    "smoke",
+    "laser",
+    "",
+    ""
+];
+
