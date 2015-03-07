@@ -5,8 +5,6 @@
     "electric",
     "magnetic",
     "smoke",
-    "laser",
-    "",
-    ""
+    "laser"
 ];
 

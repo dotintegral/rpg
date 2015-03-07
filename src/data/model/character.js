@@ -3,7 +3,7 @@ module.exports = function (db, cb) {
     var Integer;
     
     Integer = {
-       'integer'
+        type: 'integer'
     };
 
     db.define('character', {
