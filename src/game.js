@@ -28,7 +28,7 @@
         }
 
         if (run.bootstrapData()) {
-            loggerDB.info('bootstraping sample data');
+            require('./data/dataPopulator').populate(db);
         }
 
         battle.run(db);
