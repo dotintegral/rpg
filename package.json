@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "orm": "^2.1.22"
+    "log4js": "^0.6.22",
+    "orm": "^2.1.22",
+    "sqlite3": "^3.0.5"
   }
 }

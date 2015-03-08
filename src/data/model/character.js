@@ -1,12 +1,18 @@
 module.exports = function (db, cb) {
 
-    var Integer;
+    var Id, Integer;
     
+    Id = {
+        type: 'serial',
+        key: true
+    };
+
     Integer = {
         type: 'integer'
     };
 
     db.define('character', {
+        id: Id,
 
         // Metadata
         name: String,
