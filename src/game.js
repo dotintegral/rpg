@@ -39,9 +39,4 @@
         loggerDB.error('DBERR', err);
     });
 
-
-    db.load('./data/model', function (err) {
-        loggerDB.info('loaded models');
-    });
-
 }());
