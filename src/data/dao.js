@@ -24,16 +24,13 @@ module.exports = (function (db) {
     }
 
     function load(name, cb) {
-        db.load(modelDir + name, cb);
-    }
-
-    function get(name) {
-        return db.models[name];
+        db.load(modelDir + name, function (err) {
+            cb(err, db.models);
+        });
     }
 
     return {
         connect: connect,
-        load: load,
-        get: get
+        load: load
     }
 }());

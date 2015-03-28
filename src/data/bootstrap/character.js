@@ -1,18 +1,18 @@
 module.exports = (function () {
 
     var data = {
-        id: 1,
+        id: 7,
         name: "John"
     }
     
     function create(dao) {
 
-        dao.load("character", function (err) {
+        dao.load("character", function (err, models) {
             if (err) {
                 console.log("Err", err);
             }
 
-            var model = dao.get("character");
+            var model = models.character;
 
             model.create(data, function (err, result) {
                 if (err) {
@@ -23,7 +23,6 @@ module.exports = (function () {
             });
 
         })
-
     };
 
     return {
