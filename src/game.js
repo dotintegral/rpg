@@ -19,10 +19,13 @@
 
     dao.connect(config, function (err) {
         if (run.bootstrapData()) {
-            require('./data/dataPopulator').populate(dao);
+            require('./data/dataPopulator').populate(function (err, result) {
+                battle.run();
+            });
+        } else {
+            battle.run();
         }
 
-        battle.run(dao);
     });
 
 }());
