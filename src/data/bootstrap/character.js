@@ -1,13 +1,13 @@
 module.exports = (function () {
 
     var data = {
-        id: 7,
+        id: 8,
         name: "John"
     }
     
     function create(dao) {
 
-        dao.load("character", function (err, models) {
+        dao.load(["character"], function (err, models) {
             if (err) {
                 console.log("Err", err);
             }

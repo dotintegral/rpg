@@ -1,8 +1,10 @@
 module.exports = (function (db) {
 
-    var modelDir = __dirname + "/model/",
-        logger = require('log4js').getLogger('db');
+    var logger = require('log4js').getLogger('db');
         orm = require('orm'),
+        async = require('async'),
+
+        modelDir = __dirname + "/model/",
         db = null;
     
 
@@ -23,8 +25,16 @@ module.exports = (function (db) {
         });
     }
 
-    function load(name, cb) {
-        db.load(modelDir + name, function (err) {
+    function load(names, cb) {
+        var tasks = names.map(function (name) {
+            return function (onLoad) {
+                db.load(modelDir + name, function (err) {
+                    onLoad(err);
+                });
+            };
+        });
+
+        async.parallel(tasks, function (err) {
             cb(err, db.models);
         });
     }
