@@ -16,7 +16,7 @@ module.exports = function (db, cb) {
 
         // Metadata
         name: String,
-        level: Integer,
+/*        level: Integer,
         strenght: Integer,
         speed: Integer,
         technique: Integer,
@@ -40,7 +40,7 @@ module.exports = function (db, cb) {
         tachionAttacks: Object,
         weapons: Object,
         items: Object
-
+*/
     }, {
         methods: {
 

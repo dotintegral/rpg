@@ -1,6 +1,6 @@
 module.exports = (function () {
     
-    function populate(db) {
+    function populate(dao) {
         var fs,
             logger,
             directory,
@@ -19,7 +19,7 @@ module.exports = (function () {
             })
             .forEach(function (file) {
                 var data = require(directory + "/" + file);
-                data.create(db);
+                data.create(dao);
             });
     }
 

@@ -5,14 +5,14 @@ module.exports = (function () {
         name: "John"
     }
     
-    function create(db) {
+    function create(dao) {
 
-        db.load("../model/character", function (err) {
+        dao.load("character", function (err) {
             if (err) {
                 console.log("Err", err);
             }
 
-            var model = db.models.character;
+            var model = dao.get("character");
 
             model.create(data, function (err, result) {
                 if (err) {
