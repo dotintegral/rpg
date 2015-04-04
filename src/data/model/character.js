@@ -16,6 +16,7 @@ module.exports = function (db, cb) {
 
         // Metadata
         name: String,
+        type: String,
 /*        level: Integer,
         strenght: Integer,
         speed: Integer,

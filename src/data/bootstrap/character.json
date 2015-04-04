@@ -2,12 +2,15 @@
     "name": "character",
     "data": [{
         "id": 1,
-        "name": "A"
+        "name": "Ally",
+        "type": "generic_ally"
     }, {
         "id": 2,
-        "name": "B"
+        "name": "Foe1",
+        "type": "generic_foe"
     }, {
         "id": 3,
-        "name": "C"
+        "name": "Foe2",
+        "type": "generic_foe"
     }]
 }
